@@ -2,14 +2,14 @@ import type { ReactNode } from 'react';
 
 interface PageHeroProps {
   kicker: string;
-  title: string | string[];
+  title: string | readonly string[];
   lead: string;
   aside?: ReactNode;
   children?: ReactNode;
 }
 
 export function PageHero({ kicker, title, lead, aside, children }: PageHeroProps) {
-  const lines = Array.isArray(title) ? title : [title];
+  const lines: readonly string[] = typeof title === 'string' ? [title] : title;
 
   return (
     <section className="page-hero">
