@@ -34,6 +34,23 @@
       html { background: #05070d; }
       body { margin: 0; }
     </style>
+    <script>
+      // GitHub Pages serves 404.html for deep links; the redirect page stores the
+      // requested path here so the app can restore it before React Router starts.
+      (function () {
+        try {
+          var target = sessionStorage.getItem('gorgon:redirect');
+          if (!target) return;
+          sessionStorage.removeItem('gorgon:redirect');
+          var base = '%BASE_URL%'.replace(/\/$/, '');
+          if (target === base + '/' || target.indexOf(base + '/') === 0) {
+            history.replaceState(null, '', target);
+          }
+        } catch (error) {
+          /* storage unavailable: keep the requested URL as served */
+        }
+      })();
+    </script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",

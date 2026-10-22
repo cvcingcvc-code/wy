@@ -1,4 +1,4 @@
-import { copyFile, writeFile } from 'node:fs/promises';
+import { writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 
 const dist = resolve(process.cwd(), 'dist');
@@ -33,9 +33,52 @@ const urls = routes
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
 const robots = `User-agent: *\nAllow: /\n\nSitemap: ${locationFor('/sitemap.xml')}\n`;
 
+const basePath = `${prefix}/`;
+const redirectPage = `<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#05070d" />
+    <title>正在打开 · 戈尔贡科技</title>
+    <style>
+      html { background: #05070d; color: #eef2f8; }
+      body {
+        display: grid;
+        min-height: 100vh;
+        margin: 0;
+        place-items: center;
+        font-family: system-ui, sans-serif;
+        text-align: center;
+      }
+      p { margin: 12px 0; }
+      a { color: #8fb8ff; }
+    </style>
+    <script>
+      (function () {
+        var target = location.pathname + location.search + location.hash;
+        try {
+          sessionStorage.setItem('gorgon:redirect', target);
+        } catch (error) {
+          /* storage unavailable: fall back to the home page below */
+        }
+        location.replace(${JSON.stringify(basePath)});
+      })();
+    </script>
+  </head>
+  <body>
+    <main>
+      <p>正在打开戈尔贡科技官网…</p>
+      <p><a href="${basePath}">如果没有自动跳转，请点击这里</a></p>
+    </main>
+  </body>
+</html>
+`;
+
 await writeFile(resolve(dist, 'sitemap.xml'), sitemap, 'utf8');
 await writeFile(resolve(dist, 'robots.txt'), robots, 'utf8');
-await copyFile(resolve(dist, 'index.html'), resolve(dist, '404.html'));
+await writeFile(resolve(dist, '404.html'), redirectPage, 'utf8');
 await writeFile(resolve(dist, '.nojekyll'), '', 'utf8');
 
-console.log(`postbuild: sitemap + robots written for ${origin}${prefix || '/'}; 404.html and .nojekyll ready.`);
+console.log(`postbuild: sitemap + robots written for ${origin}${prefix || '/'}; 404.html redirect and .nojekyll ready.`);

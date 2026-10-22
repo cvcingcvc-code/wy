@@ -50,7 +50,7 @@ push / workflow_dispatch
 
 - `dist/sitemap.xml`（含所有公共路由与最后更新日期）
 - `dist/robots.txt`
-- `dist/404.html`（Vite 构建入口的副本，用于 SPA 深链）
+- `dist/404.html`（SPA 深链引导页：暂存目标路径后跳转到站点根，200 页面加载前由内联脚本恢复路径）
 - `dist/.nojekyll`
 
 `public/og.png` 不提交到 Git；它在构建时生成后被 Vite 复制进 `dist/`。
@@ -109,7 +109,9 @@ GitHub Pages 在部分网络环境下可能访问不稳定。项目没有配置�
 
 ### 页面刷新后出现 404
 
-确认 `dist/404.html` 存在，且 Pages 站点使用的是 workflow 构建产物。直接访问 `/wy/products/gorgon-workbench` 时，GitHub Pages 会返回 `404.html`，React Router 的 `basename` 再接管路由。
+GitHub Pages 没有服务器端重写；直接访问 `/wy/products/gorgon-workbench` 时，服务器会先返回状态 404 的 `404.html`。该页面随后跳转到 `/wy/`，由内联脚本通过 `history.replaceState` 恢复原路径，React Router 的 `basename` 再接管路由。浏览器最终停留在 200 的文档上，URL 保持不变。
+
+如果出现白屏，确认 `dist/404.html` 是由 `scripts/postbuild.mjs` 生成的引导页，而不是旧版入口副本。搜索引擎在首次请求时仍可能看到 404 状态；需要完整 SEO 与直接 200 深链时，请使用 Vercel 的 rewrite 部署。
 
 ### 静态资源 404 / 白屏
 
