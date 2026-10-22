@@ -1,0 +1,47 @@
+:root {
+  color-scheme: dark;
+
+  --font-sans: "Inter", "Helvetica Neue", "Segoe UI", "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  --font-mono: "SFMono-Regular", "Cascadia Code", "Roboto Mono", "Liberation Mono", "Consolas",
+    monospace;
+
+  --ink-1000: #04060b;
+  --ink-950: #060911;
+  --ink-900: #080d17;
+  --ink-850: #0b111d;
+  --ink-800: #0f1725;
+  --ink-750: #141e2f;
+
+  --paper: #f2f6fd;
+  --silver: #c3cee0;
+  --muted: #8493aa;
+  --faint: #7d8ba1;
+
+  --line: rgba(158, 184, 224, 0.13);
+  --line-strong: rgba(158, 184, 224, 0.26);
+
+  --accent: #5b9dff;
+  --accent-bright: #94c3ff;
+  --accent-deep: #2c66c9;
+  --teal: #57e6d9;
+  --amber: #e8c36b;
+  --danger: #ff8b8b;
+  --accent-soft: rgba(91, 157, 255, 0.1);
+  --accent-line: rgba(91, 157, 255, 0.32);
+  --gradient-text: linear-gradient(102deg, #f4f8ff 8%, #d5e4ff 46%, #7fb9ff 100%);
+
+  --container: 1240px;
+  --gutter: clamp(20px, 4.2vw, 56px);
+  --header-h: 76px;
+  --section-space: clamp(84px, 9.5vw, 138px);
+
+  --radius-xs: 8px;
+  --radius-sm: 12px;
+  --radius: 20px;
+  --radius-lg: 30px;
+
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --shadow-card: 0 40px 100px -60px rgba(0, 0, 0, 0.9);
+}
