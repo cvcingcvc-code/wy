@@ -165,6 +165,7 @@ export const en: SiteCopy = {
     { path: '/technology', label: 'Technology' },
     { path: '/contact', label: 'Contact' },
   ],
+  products,
   logo: { aria: 'Gorgon Technology — back to home' },
   ui: {
     skip: 'Skip to content',

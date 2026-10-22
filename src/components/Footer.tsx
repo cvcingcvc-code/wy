@@ -71,7 +71,7 @@ export function Footer() {
             }}
           >
             {copy.footer.backTop}
-            <GorgonMark className="footer-top__mark" />
+            <Mark className="footer-top__mark" />
           </button>
         </div>
       </div>

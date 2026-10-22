@@ -633,7 +633,7 @@ export const zh = {
   },
 } as const;
 
-export type SiteCopy = Widen<typeof zh> & {
+export type SiteCopy = Omit<Widen<typeof zh>, 'products' | 'solutions'> & {
   products: Product[];
-  solutions: Widen<typeof zh>['solutions'] & { items: Direction[] };
+  solutions: Omit<Widen<typeof zh>['solutions'], 'items'> & { items: Direction[] };
 };

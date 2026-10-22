@@ -61,7 +61,7 @@ export type Widen<T> = T extends string
     : T extends boolean
       ? boolean
       : T extends readonly (infer U)[]
-        ? Widen<U>[]
+        ? readonly Widen<U>[]
         : T extends object
           ? { -readonly [K in keyof T]: Widen<T[K]> }
           : T;

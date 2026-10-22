@@ -15,6 +15,8 @@ export function ParticleField({ className = '' }: { className?: string }) {
     const canvas = canvasRef.current;
     const parent = canvas?.parentElement;
     if (!canvas || !parent) return;
+    const canvasEl = canvas;
+    const parentEl = parent;
 
     let context: CanvasRenderingContext2D | null = null;
     try {
@@ -96,14 +98,14 @@ export function ParticleField({ className = '' }: { className?: string }) {
     }
 
     function resize() {
-      const rect = parent.getBoundingClientRect();
+      const rect = parentEl.getBoundingClientRect();
       width = Math.max(1, rect.width);
       height = Math.max(1, rect.height);
       const dpr = Math.min(window.devicePixelRatio || 1, 2);
-      canvas.width = Math.round(width * dpr);
-      canvas.height = Math.round(height * dpr);
-      canvas.style.width = `${width}px`;
-      canvas.style.height = `${height}px`;
+      canvasEl.width = Math.round(width * dpr);
+      canvasEl.height = Math.round(height * dpr);
+      canvasEl.style.width = `${width}px`;
+      canvasEl.style.height = `${height}px`;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
       const count = width < 720 ? 24 : 52;
@@ -121,7 +123,7 @@ export function ParticleField({ className = '' }: { className?: string }) {
 
     const resizeObserver =
       typeof ResizeObserver !== 'undefined' ? new ResizeObserver(resize) : null;
-    resizeObserver?.observe(parent);
+    resizeObserver?.observe(parentEl);
     window.addEventListener('resize', resize, { passive: true });
 
     const intersectionObserver =
@@ -135,7 +137,7 @@ export function ParticleField({ className = '' }: { className?: string }) {
             { threshold: 0 },
           )
         : null;
-    intersectionObserver?.observe(parent);
+    intersectionObserver?.observe(parentEl);
 
     const onVisibilityChange = () => {
       if (document.hidden) stop();
