@@ -16,7 +16,7 @@ export function Footer() {
             <Link to="/" className="site-footer__lockup" aria-label={copy.logo.aria}>
               <Mark className="site-footer__mark" />
               <span>
-                <strong>GORGON</strong>
+                <strong>GORGON</strong>{' '}
                 <small>TECHNOLOGY</small>
               </span>
             </Link>

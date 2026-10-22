@@ -51,7 +51,7 @@ export function Logo({ onClick }: { onClick?: () => void }) {
     <Link className="brand" to="/" aria-label={copy.logo.aria} onClick={onClick}>
       <GorgonMark className="brand__mark" />
       <span className="brand__type" aria-hidden="true">
-        <strong>GORGON</strong>
+        <strong>GORGON</strong>{' '}
         <span>TECHNOLOGY</span>
       </span>
     </Link>

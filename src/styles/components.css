@@ -19,6 +19,9 @@
 
 .site-header.is-open {
   background: rgba(5, 8, 14, 0.97);
+  /* A backdrop-filter here would make the header the containing block for the
+     fixed mobile menu, collapsing it to zero height. */
+  backdrop-filter: none;
 }
 
 .site-header__inner {

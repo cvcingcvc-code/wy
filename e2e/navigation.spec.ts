@@ -30,8 +30,9 @@ test('language switch translates the page and survives a reload', async ({ page 
 
   await expect(page.locator('html')).toHaveAttribute('lang', 'en');
   await expect(page.locator('main h1')).toContainText('Building AI for');
-  await expect(page.getByRole('navigation', { name: 'Site navigation' })).toBeVisible();
-  await expect(page.getByRole('link', { name: 'About' })).toBeVisible();
+  const headerNav = page.getByRole('navigation', { name: 'Site navigation' });
+  await expect(headerNav).toBeVisible();
+  await expect(headerNav.getByRole('link', { name: 'About' })).toBeVisible();
 
   await page.reload();
   await waitForPage(page);
