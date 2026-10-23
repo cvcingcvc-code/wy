@@ -265,6 +265,13 @@
   font-family: var(--font-mono);
   font-size: 9px;
   letter-spacing: 0.24em;
+  /* The crosshair and the outer grid circle both run through the two side
+     labels. Knocking the ring out behind the glyphs is how a drawing resolves
+     a label/line collision — the line stops at the letter, not across it. */
+  paint-order: stroke fill;
+  stroke: rgba(6, 9, 17, 0.92);
+  stroke-linejoin: round;
+  stroke-width: 4;
 }
 
 .hs-ticks path {

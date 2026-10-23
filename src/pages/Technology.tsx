@@ -21,7 +21,7 @@ export function Technology() {
         lead={tech.lead}
         aside={
           <div className="hero-stack">
-            <span className="mono-label">STACK / 05 LAYERS</span>
+            <span className="mono-label">STACK / {tech.layers.length} LAYERS</span>
             <ol>
               {tech.layers.map((layer) => (
                 <li key={layer.index}>

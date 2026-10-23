@@ -37,7 +37,7 @@ export function Products() {
         <div className="container">
           <Reveal>
             <div className="index-meta">
-              <span className="mono-label">PRODUCT INDEX / 03</span>
+              <span className="mono-label">PRODUCT INDEX / {copy.products.length}</span>
               <p>{page.note}</p>
             </div>
           </Reveal>
