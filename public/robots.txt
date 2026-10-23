@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cvcingcvc-code.github.io/wy/sitemap.xml

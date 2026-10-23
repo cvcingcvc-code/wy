@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#05070D"/>
+      <stop offset="0.55" stop-color="#070C17"/>
+      <stop offset="1" stop-color="#081426"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#4C8DFF" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#4C8DFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#57E6D9" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#57E6D9" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0H0V60" fill="none" stroke="#E8F1FF" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E8F1FF" stop-opacity="0.075"/>
+      <stop offset="1" stop-color="#E8F1FF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <circle cx="980" cy="300" r="400" fill="url(#glowA)"/>
+  <circle cx="210" cy="610" r="330" fill="url(#glowB)"/>
+  <rect x="0" y="0" width="1200" height="220" fill="url(#fade)"/>
+
+  <!-- brand lockup -->
+  <g transform="translate(80 68)">
+    <circle cx="32" cy="32" r="29" fill="#060A12" stroke="#E8F1FF" stroke-opacity="0.16"/>
+    <path d="M45.5 22.8A16 16 0 1 0 48 32H34" fill="none" stroke="#EEF3FF" stroke-width="3" stroke-linecap="round"/>
+    <path d="M34 32h14" fill="none" stroke="#5B9DFF" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="32" cy="32" r="2.7" fill="#5B9DFF"/>
+    <circle cx="48" cy="32" r="2.4" fill="#5B9DFF"/>
+    <path d="M48 32l5-8" fill="none" stroke="#EEF3FF" stroke-opacity="0.55" stroke-width="1.2"/>
+    <circle cx="53" cy="24" r="1.6" fill="#EEF3FF" fill-opacity="0.85"/>
+  </g>
+  <text x="162" y="98" fill="#F2F6FD" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="27" font-weight="600" letter-spacing="6">GORGON</text>
+  <text x="162" y="121" fill="#A9B8CE" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" letter-spacing="4.4">TECHNOLOGY</text>
+
+  <text x="80" y="340" fill="#F2F6FD" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="74" font-weight="600" letter-spacing="-2.6">BUILDING AI FOR</text>
+  <text x="80" y="424" fill="#6EA8FF" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="74" font-weight="600" letter-spacing="-2.6">REAL-WORLD WORK.</text>
+
+  <line x1="80" y1="476" x2="560" y2="476" stroke="#E8F1FF" stroke-opacity="0.16"/>
+  <text x="80" y="518" fill="#A9B8CE" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" letter-spacing="2.4">AI APPLICATIONS · AGENTS · AUTOMATION · LOCAL MODELS</text>
+  <text x="80" y="572" fill="#6E7F97" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" letter-spacing="2">GORGON TECHNOLOGY · V1 / 2026</text>
+
+  <!-- system diagram -->
+  <g transform="translate(928 292)" fill="none">
+    <circle r="214" stroke="#E8F1FF" stroke-opacity="0.12"/>
+    <circle r="158" stroke="#E8F1FF" stroke-opacity="0.14" stroke-dasharray="2 9"/>
+    <circle r="104" stroke="#5B9DFF" stroke-opacity="0.3"/>
+    <circle r="58" stroke="#5B9DFF" stroke-opacity="0.42"/>
+    <path d="M-158 0H158M0-158V158" stroke="#E8F1FF" stroke-opacity="0.08" transform="rotate(45)"/>
+    <path d="M0-104L90 52L-90 52Z" stroke="#5B9DFF" stroke-opacity="0.45" stroke-width="1.2"/>
+    <circle cx="0" cy="-104" r="5" fill="#6EA8FF"/>
+    <circle cx="90" cy="52" r="5" fill="#6EA8FF"/>
+    <circle cx="-90" cy="52" r="5" fill="#6EA8FF"/>
+    <circle cx="214" cy="0" r="3.5" fill="#57E6D9"/>
+    <circle cx="-152" cy="-152" r="3" fill="#E8F1FF" fill-opacity="0.7"/>
+    <circle cx="0" cy="0" r="26" fill="#060A12" stroke="#E8F1FF" stroke-opacity="0.28"/>
+    <path d="M11-5A13 13 0 1 0 13 0H0" stroke="#EEF3FF" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M0 0h13" stroke="#5B9DFF" stroke-width="2.4" stroke-linecap="round"/>
+    <circle cx="0" cy="0" r="2" fill="#5B9DFF"/>
+  </g>
+  <g fill="#8FA3BD" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" letter-spacing="2.6">
+    <text x="882" y="164">AGENT</text>
+    <text x="1132" y="272">TOOL</text>
+    <text x="890" y="446">HUMAN</text>
+    <text x="720" y="272">DATA</text>
+  </g>
+</svg>

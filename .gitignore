@@ -11,6 +11,7 @@ test-results/
 playwright-report/
 blob-report/
 screenshots/
+!docs/screenshots/
 coverage/
 
 # Generated at build time

@@ -1,0 +1,41 @@
+{
+  "name": "gorgon-technology-website",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "上海戈尔贡科技有限公司官方网站 V1 — GORGON TECHNOLOGY",
+  "homepage": "https://cvcingcvc-code.github.io/wy/",
+  "scripts": {
+    "dev": "vite",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "build": "tsc --noEmit && vite build && node scripts/postbuild.mjs",
+    "preview": "vite preview",
+    "og": "node scripts/generate-og.mjs",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.18.2"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.64.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/node": "^24.0.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "jsdom": "^26.1.0",
+    "typescript": "^5.6.3",
+    "vite": "^6.0.3",
+    "vitest": "^3.2.7"
+  },
+  "engines": {
+    "node": ">=20.19"
+  }
+}
