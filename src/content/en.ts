@@ -220,6 +220,8 @@ export const en: SiteCopy = {
     secondary: 'Get in touch',
     heroTags: ['AI Agents', 'Automation', 'Local Models', 'Multi-device'],
     systemLabels: ['AGENT', 'WORKFLOW', 'KNOWLEDGE', 'HUMAN'],
+    systemAria:
+      'System map: agents, workflow, knowledge and human judgement inside one bounded system; high-risk actions keep human approval.',
     heroFoot: { brand: 'GORGON TECHNOLOGY', scroll: 'SCROLL TO EXPLORE', version: 'V1 / 2026' },
     marquee: ['AI AGENTS', 'WORKFLOW AUTOMATION', 'LOCAL MODELS', 'MULTI-DEVICE COLLABORATION', 'SOFTWARE PRODUCTS'],
     intro: {

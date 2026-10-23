@@ -615,4 +615,16 @@ button {
     opacity: 1;
     transform: none;
   }
+
+  .hero__copy > *,
+  .hero-system {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .hs-arc {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
 }

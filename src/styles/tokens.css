@@ -26,7 +26,6 @@
   --accent-deep: #2c66c9;
   --teal: #57e6d9;
   --danger: #ff8b8b;
-  --accent-soft: rgba(91, 157, 255, 0.1);
   --accent-line: rgba(91, 157, 255, 0.32);
 
   /* Aegis bronze carries the honesty vocabulary — what is in progress and where a
@@ -35,11 +34,9 @@
   --aegis-soft: rgba(201, 161, 92, 0.12);
   --aegis-line: rgba(201, 161, 92, 0.4);
   --stone: #94a1b6;
-  --gradient-text: linear-gradient(102deg, #f4f8ff 8%, #d5e4ff 46%, #7fb9ff 100%);
 
   /* Reversed blueprint band: engineering drawing on paper. */
   --blueprint: #e7eefb;
-  --blueprint-deep: #d8e4f6;
   --bp-ink: #0a1220;
   --bp-muted: #46536b;
   --bp-line: rgba(16, 34, 62, 0.16);

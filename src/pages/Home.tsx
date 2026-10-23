@@ -223,7 +223,7 @@ export function Home() {
         </div>
       </section>
 
-      <section className="section tech-section" aria-labelledby="tech-title">
+      <section className="section section--blueprint tech-section" aria-labelledby="tech-title">
         <div className="container">
           <Reveal>
             <SectionHead

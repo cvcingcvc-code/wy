@@ -216,6 +216,7 @@ export const zh = {
     secondary: '联系我们',
     heroTags: ['AI Agent', '智能自动化', '本地模型', '多端协同'],
     systemLabels: ['AGENT', 'WORKFLOW', 'KNOWLEDGE', 'HUMAN'],
+    systemAria: '系统示意图：智能体、工作流、知识与人工判断四层协同；高风险动作保留人工批准。',
     heroFoot: { brand: 'GORGON TECHNOLOGY', scroll: 'SCROLL TO EXPLORE', version: 'V1 / 2026' },
     marquee: ['AI AGENTS', 'WORKFLOW AUTOMATION', 'LOCAL MODELS', 'MULTI-DEVICE COLLABORATION', 'SOFTWARE PRODUCTS'],
     intro: {

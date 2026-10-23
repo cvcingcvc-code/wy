@@ -3,9 +3,10 @@ import { useLocale } from '../lib/i18n';
 export function HeroSystem() {
   const { copy } = useLocale();
   const [agent, workflow, knowledge, human] = copy.home.systemLabels;
+  const caption = `SYSTEM MAP / ${copy.products.length} PRODUCTS · ${copy.solutions.items.length} DIRECTIONS`;
 
   return (
-    <div className="hero-system" aria-hidden="true">
+    <div className="hero-system" role="img" aria-label={copy.home.systemAria}>
       <svg viewBox="0 0 600 600" className="hero-system__svg" focusable="false">
         <defs>
           <radialGradient id="hs-core" cx="50%" cy="50%" r="50%">
@@ -85,7 +86,7 @@ export function HeroSystem() {
           <path d="M300 244v14M300 342v14M244 300h14M342 300h14" />
         </g>
       </svg>
-      <span className="hero-system__caption">SYSTEM MAP / BOUNDED AUTONOMY</span>
+      <span className="hero-system__caption">{caption}</span>
     </div>
   );
 }
