@@ -187,16 +187,19 @@
   overflow: visible;
 }
 
+/* The reading sits under the drawing rather than inside it, so it can never
+   collide with the KNOWLEDGE node label. */
 .hero-system__caption {
-  position: absolute;
-  bottom: -1%;
-  left: 50%;
+  display: block;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
   color: var(--faint);
   font-family: var(--font-mono);
   font-size: 8px;
   letter-spacing: 0.2em;
+  text-align: center;
   white-space: nowrap;
-  transform: translateX(-50%);
 }
 
 .hs-grid path,
@@ -635,7 +638,6 @@
   overflow: hidden;
   padding: clamp(28px, 4.2vw, 56px);
   border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
   background:
     radial-gradient(ellipse at 100% 0%, rgba(56, 110, 210, 0.15), transparent 56%),
     var(--ink-900);
@@ -2484,7 +2486,7 @@
   }
 
   .hero-system__caption {
-    bottom: -3%;
+    margin-top: 10px;
     font-size: 7px;
   }
 
@@ -2705,5 +2707,21 @@
     grid-template-columns: minmax(0, 1fr) 16px;
     gap: 8px;
     font-size: 0.95rem;
+  }
+}
+
+/* pages.css is imported after base.css, so the global reduce reset in base.css
+   cannot beat these animation shorthands. Without this block the staged hero
+   entrance leaves the lead, buttons and tags at opacity 0 for up to 350ms on
+   reduced-motion devices. */
+@media (prefers-reduced-motion: reduce) {
+  .hero__copy > *,
+  .hero-system,
+  .hs-arc {
+    animation: none;
+  }
+
+  .hs-arc {
+    stroke-dashoffset: 0;
   }
 }
