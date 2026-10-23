@@ -2,10 +2,9 @@
 
 上海戈尔贡科技有限公司的官方网站。用 React + TypeScript + Vite 构建，默认中文，提供英文切换，以静态站点方式部署，不依赖数据库或后端服务。
 
-> **线上预览**：部署通过后由 GitHub Actions 发布至
-> https://cvcingcvc-code.github.io/wy/
+> **线上预览（GitHub Pages）**：https://cvcingcvc-code.github.io/wy/
 >
-> 预览构建来自 `feat/gorgon-company-website-v1` 分支；合并到 `main` 前不构成正式上线。
+> 预览由 `feat/gorgon-company-website-v1` 分支经 GitHub Actions 自动构建并发布；合并到 `main` 前不构成正式上线。
 
 ## 项目范围
 
@@ -37,6 +36,16 @@
 - 完整响应式：桌面、平板、390px 与 375px 手机视口分别验证
 - `prefers-reduced-motion: reduce` 下关闭粒子动画、渐显与平滑滚动
 - 不使用第三方字体、CDN、分析脚本或追踪代码
+
+## 界面预览
+
+以下截图由 CI 中的 Playwright 在 Chromium 中生成，为完整页面（WebP 压缩）：
+
+| 页面 | 1440 × 900 | 390 × 844 | 375 × 812 |
+| --- | --- | --- | --- |
+| 首页 | [查看](docs/screenshots/home-1440.webp) | [查看](docs/screenshots/home-390.webp) | [查看](docs/screenshots/home-375.webp) |
+| 产品与实验室 | [查看](docs/screenshots/products-1440.webp) | [查看](docs/screenshots/products-390.webp) | [查看](docs/screenshots/products-375.webp) |
+| 联系我们 | [查看](docs/screenshots/contact-1440.webp) | [查看](docs/screenshots/contact-390.webp) | [查看](docs/screenshots/contact-375.webp) |
 
 ## 技术栈
 
@@ -163,6 +172,7 @@ npm install → typecheck + unit tests → Playwright Chromium
 
 - 无 CMS、无数据库、无表单后端
 - 未配置正式域名，GitHub Pages 预览路径为 `/wy/`
+- GitHub Pages 首次请求深层链接会返回状态 404 的引导页，随即跳转并在 200 文档上恢复路径；需要直接 200 的深链与完整 SEO 时建议使用 Vercel rewrite
 - 英文公司法定名称、电话、办公地址等待公司确认（见 [`docs/PENDING-CONFIRMATION.md`](docs/PENDING-CONFIRMATION.md)）
 - 产品 Demo 均未公开，站点只提供真实仓库与 Workbench Alpha APK
 - 站内所有产品声明以公开仓库与验收记录为依据，不构成性能或商业承诺
