@@ -137,7 +137,6 @@ export function ProductDetail() {
           <div className="product-detail__main">
             <Reveal>
               <div className="detail-block">
-                <span className="detail-block__index">01</span>
                 <h2>{labels.overview}</h2>
                 <p className="detail-overview">{product.description}</p>
               </div>
@@ -145,7 +144,6 @@ export function ProductDetail() {
 
             <Reveal>
               <div className="detail-block">
-                <span className="detail-block__index">02</span>
                 <h2>{labels.implementedTitle}</h2>
                 <p className="detail-block__note">{labels.implementedNote}</p>
                 <ul className="check-list check-list--done">
@@ -163,7 +161,6 @@ export function ProductDetail() {
 
             <Reveal>
               <div className="detail-block">
-                <span className="detail-block__index">03</span>
                 <h2>{labels.inProgressTitle}</h2>
                 <p className="detail-block__note">{labels.inProgressNote}</p>
                 <ul className="check-list check-list--progress">
@@ -181,7 +178,6 @@ export function ProductDetail() {
 
             <Reveal>
               <div className="detail-block detail-block--limits">
-                <span className="detail-block__index">04</span>
                 <h2>{labels.boundariesTitle}</h2>
                 <p className="detail-block__note">{labels.boundariesNote}</p>
                 <ul className="check-list check-list--limit">

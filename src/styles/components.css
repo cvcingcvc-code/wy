@@ -86,12 +86,6 @@
   transition: color 0.2s var(--ease);
 }
 
-.site-nav a .nav-index {
-  color: var(--faint);
-  font-family: var(--font-mono);
-  font-size: 8px;
-}
-
 .site-nav a::after {
   position: absolute;
   right: 100%;
@@ -236,7 +230,7 @@
 
 .mobile-nav a {
   display: grid;
-  grid-template-columns: 32px minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
   gap: 12px;
   padding: 16px 0;
@@ -248,12 +242,6 @@
 
 .mobile-nav a.is-active {
   color: var(--accent-bright);
-}
-
-.mobile-nav__index {
-  color: var(--faint);
-  font-family: var(--font-mono);
-  font-size: 9px;
 }
 
 .mobile-nav .icon {
@@ -493,12 +481,6 @@
   display: flex;
   flex-direction: column;
   gap: 13px;
-}
-
-.product-card__index {
-  color: var(--faint);
-  font-family: var(--font-mono);
-  font-size: 10px;
 }
 
 .product-card h3 {
@@ -862,7 +844,7 @@
 
 .faq-item summary {
   display: grid;
-  grid-template-columns: 34px minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
   gap: 12px;
   padding: 22px 0;
@@ -875,12 +857,6 @@
 
 .faq-item summary::-webkit-details-marker {
   display: none;
-}
-
-.faq-item__index {
-  color: var(--faint);
-  font-family: var(--font-mono);
-  font-size: 9px;
 }
 
 .faq-item__icon {

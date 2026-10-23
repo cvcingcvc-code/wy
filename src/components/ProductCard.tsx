@@ -6,11 +6,9 @@ import { StatusBadge } from './StatusBadge';
 
 export function ProductCard({
   product,
-  index,
   featured = false,
 }: {
   product: Product;
-  index: number;
   featured?: boolean;
 }) {
   const { copy } = useLocale();
@@ -25,9 +23,6 @@ export function ProductCard({
       </div>
 
       <div className="product-card__body">
-        <span className="product-card__index" aria-hidden="true">
-          {String(index + 1).padStart(2, '0')}
-        </span>
         <h3>{product.name}</h3>
         <p className="product-card__summary">{product.summary}</p>
         <p className="product-card__stage">{product.stageNote}</p>

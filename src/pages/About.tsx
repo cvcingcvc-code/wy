@@ -45,7 +45,7 @@ export function About() {
       <section className="section">
         <div className="container">
           <Reveal>
-            <SectionHead index="01" kicker={about.labels.story} title={about.storyTitle} />
+            <SectionHead kicker={about.labels.story} title={about.storyTitle} />
           </Reveal>
           <div className="story-grid">
             <Reveal>
@@ -63,17 +63,12 @@ export function About() {
       <section className="section section--alt">
         <div className="container">
           <Reveal>
-            <SectionHead
-              index="02"
-              kicker={about.labels.principles}
-              title={about.principlesTitle}
-            />
+            <SectionHead kicker={about.labels.principles} title={about.principlesTitle} />
           </Reveal>
           <div className="card-grid card-grid--three">
             {about.principles.map((principle, index) => (
-              <Reveal key={principle.index} delay={index * 80}>
+              <Reveal key={principle.title} delay={index * 80}>
                 <article className="principle-card">
-                  <span className="principle-card__index">{principle.index}</span>
                   <h3>{principle.title}</h3>
                   <p>{principle.text}</p>
                 </article>
@@ -87,7 +82,6 @@ export function About() {
         <div className="container">
           <Reveal>
             <SectionHead
-              index="03"
               kicker={about.labels.process}
               title={about.processTitle}
               lead={about.processLead}
@@ -112,7 +106,6 @@ export function About() {
         <div className="container">
           <Reveal>
             <SectionHead
-              index="04"
               kicker={about.labels.boundaries}
               title={about.boundariesTitle}
               lead={about.boundariesLead}
@@ -137,7 +130,6 @@ export function About() {
         <div className="container">
           <Reveal>
             <SectionHead
-              index="05"
               kicker={about.labels.now}
               title={about.nowTitle}
               lead={about.nowLead}

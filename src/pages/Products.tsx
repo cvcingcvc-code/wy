@@ -49,7 +49,6 @@ export function Products() {
                 <ProductCard
                   key={product.slug}
                   product={product}
-                  index={index}
                   featured={index === 0}
                 />
               ))}
@@ -61,11 +60,7 @@ export function Products() {
       <section className="section section--alt">
         <div className="container">
           <Reveal>
-            <SectionHead
-              index="02"
-              kicker={copy.ui.statusLegend}
-              title={page.explainTitle}
-            />
+            <SectionHead kicker={copy.ui.statusLegend} title={page.explainTitle} />
           </Reveal>
           <div className="status-explain">
             {statuses.map((status, index) => (

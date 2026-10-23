@@ -74,18 +74,14 @@ export function Contact() {
         <div className="container">
           <Reveal>
             <SectionHead
-              index="02"
               kicker={contact.labels.collaboration}
               title={contact.collaborationTitle}
               lead={contact.collaborationLead}
             />
           </Reveal>
           <ul className="topic-grid">
-            {contact.form.topics.map((item, index) => (
+            {contact.form.topics.map((item) => (
               <li className="topic-card" key={item.value}>
-                <span className="topic-card__index" aria-hidden="true">
-                  {String(index + 1).padStart(2, '0')}
-                </span>
                 <span>{item.label}</span>
               </li>
             ))}
@@ -96,15 +92,12 @@ export function Contact() {
       <section className="section">
         <div className="container">
           <Reveal>
-            <SectionHead index="03" kicker={contact.labels.faq} title={contact.faqTitle} />
+            <SectionHead kicker={contact.labels.faq} title={contact.faqTitle} />
           </Reveal>
           <Reveal className="faq-body">
             {contact.faqs.map((item, index) => (
               <details className="faq-item" key={item.q} open={index === 0}>
                 <summary>
-                  <span className="faq-item__index" aria-hidden="true">
-                    {String(index + 1).padStart(2, '0')}
-                  </span>
                   {item.q}
                   <span className="faq-item__icon" aria-hidden="true" />
                 </summary>

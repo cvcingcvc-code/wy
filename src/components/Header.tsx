@@ -71,7 +71,7 @@ export function Header() {
     window.setTimeout(() => menuTriggerRef.current?.focus(), 0);
   }
 
-  const navLinks = copy.nav.map((item, index) => (
+  const navLinks = copy.nav.map((item) => (
     <NavLink
       key={item.path}
       to={item.path}
@@ -81,9 +81,6 @@ export function Header() {
         if (menuOpen) setMenuOpen(false);
       }}
     >
-      <span className="nav-index" aria-hidden="true">
-        {String(index + 1).padStart(2, '0')}
-      </span>
       <span className="nav-label">{item.label}</span>
     </NavLink>
   ));
@@ -143,7 +140,7 @@ export function Header() {
               </button>
             </div>
             <nav className="mobile-nav" aria-label={copy.ui.menuLabel}>
-              {copy.nav.map((item, index) => (
+              {copy.nav.map((item) => (
                 <NavLink
                   key={item.path}
                   to={item.path}
@@ -151,9 +148,6 @@ export function Header() {
                   className={({ isActive }) => (isActive ? 'is-active' : undefined)}
                   onClick={() => setMenuOpen(false)}
                 >
-                  <span className="mobile-nav__index" aria-hidden="true">
-                    {String(index + 1).padStart(2, '0')}
-                  </span>
                   <span>{item.label}</span>
                   <ArrowUpRight />
                 </NavLink>

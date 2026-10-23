@@ -38,7 +38,6 @@ export function Technology() {
         <div className="container">
           <Reveal>
             <SectionHead
-              index="01"
               kicker={tech.labels.architecture}
               title={tech.architectureTitle}
               lead={tech.architectureLead}
@@ -79,17 +78,12 @@ export function Technology() {
       <section className="section section--alt">
         <div className="container">
           <Reveal>
-            <SectionHead
-              index="02"
-              kicker={tech.labels.principles}
-              title={tech.principlesTitle}
-            />
+            <SectionHead kicker={tech.labels.principles} title={tech.principlesTitle} />
           </Reveal>
           <div className="card-grid card-grid--three">
             {tech.principles.map((principle, index) => (
-              <Reveal key={principle.index} delay={index * 60}>
-                <article className="principle-card principle-card--numbered">
-                  <span className="principle-card__index">{principle.index}</span>
+              <Reveal key={principle.title} delay={index * 60}>
+                <article className="principle-card">
                   <h3>{principle.title}</h3>
                   <p>{principle.text}</p>
                 </article>
@@ -103,7 +97,6 @@ export function Technology() {
         <div className="container">
           <Reveal>
             <SectionHead
-              index="03"
               kicker={tech.labels.loop}
               title={tech.loopTitle}
               lead={tech.loopLead}
@@ -126,16 +119,13 @@ export function Technology() {
       <section className="section section--alt">
         <div className="container">
           <Reveal>
-            <SectionHead index="04" kicker={tech.labels.stack} title={tech.stackTitle} />
+            <SectionHead kicker={tech.labels.stack} title={tech.stackTitle} />
           </Reveal>
           <Reveal>
             <div className="stack-panel">
               <ul className="stack-panel__items">
-                {tech.stack.map((item, index) => (
-                  <li key={item}>
-                    <span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
-                    {item}
-                  </li>
+                {tech.stack.map((item) => (
+                  <li key={item}>{item}</li>
                 ))}
               </ul>
               <p className="foot-note">{tech.stackNote}</p>

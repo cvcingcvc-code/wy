@@ -35,7 +35,6 @@ export function Solutions() {
         <div className="container">
           <Reveal>
             <SectionHead
-              index="01"
               kicker={solutions.labels.directions}
               title={solutions.directionsTitle}
               lead={solutions.directionsLead}
@@ -102,7 +101,6 @@ export function Solutions() {
         <div className="container">
           <Reveal>
             <SectionHead
-              index="02"
               kicker={solutions.labels.collaboration}
               title={solutions.collabTitle}
               lead={solutions.collabLead}

@@ -223,7 +223,6 @@ export const en: SiteCopy = {
     heroFoot: { brand: 'GORGON TECHNOLOGY', scroll: 'SCROLL TO EXPLORE', version: 'V1 / 2026' },
     marquee: ['AI AGENTS', 'WORKFLOW AUTOMATION', 'LOCAL MODELS', 'MULTI-DEVICE COLLABORATION', 'SOFTWARE PRODUCTS'],
     intro: {
-      index: '01',
       kicker: 'Who we are',
       title: 'AI that does not stop at the demo.',
       body: [
@@ -238,35 +237,30 @@ export const en: SiteCopy = {
       ],
     },
     directions: {
-      index: '02',
       kicker: 'Technology directions',
       title: 'From one problem to a working capability.',
       lead: 'Four connected directions, from agent orchestration to local deployment.',
       items: [
         {
           id: 'agent-workflow',
-          index: '01',
           title: 'AI Agents & Workflow Automation',
           summary: 'Turn goals into tasks, let agents use tools within bounds, and keep an auditable record.',
           tags: ['Orchestration', 'Tool use', 'Human approval'],
         },
         {
           id: 'enterprise-support',
-          index: '02',
           title: 'Enterprise AI & Customer Support',
           summary: 'Build support that knows its limits from your own knowledge and policies, and hands complex issues back to people.',
           tags: ['Knowledge', 'Human handoff', 'Verifiable answers'],
         },
         {
           id: 'local-models',
-          index: '03',
           title: 'Local AI Models & Private Deployment',
           summary: 'Assess lightweight models, local inference and automation without sending data outside the organisation.',
           tags: ['Local inference', 'Data boundaries', 'Private deployment'],
         },
         {
           id: 'multi-device',
-          index: '04',
           title: 'Multi-device Collaboration & Remote Tasks',
           summary: 'Start on a phone, execute on a computer and return results, bounded by allow-lists and human approval.',
           tags: ['Multi-device', 'Remote tasks', 'Audit'],
@@ -274,7 +268,6 @@ export const en: SiteCopy = {
       ],
     },
     products: {
-      index: '03',
       kicker: 'Products & Lab',
       title: 'What we are building.',
       lead: 'Product status is based on public repositories, releases and acceptance records. Capabilities without public evidence are not presented as delivered.',
@@ -282,31 +275,26 @@ export const en: SiteCopy = {
       all: 'View all products',
     },
     scenarios: {
-      index: '04',
       kicker: 'Application scenarios',
       title: 'Let intelligence enter real workflows.',
       lead: 'We do not have a fixed answer for every case. These are the kinds of problems we are exploring and open to working on.',
       items: [
         {
-          index: 'A',
           title: 'Knowledge-intensive personal work',
           text: 'Tasks, schedules, notes and information retrieval become one continuous workflow instead of scattered apps.',
           tags: ['Personal productivity', 'Information', 'Action loop'],
         },
         {
-          index: 'B',
           title: 'Customer support and knowledge',
           text: 'Bound answers with products, FAQs and service policies; route complex cases to people.',
           tags: ['Support', 'Knowledge base', 'Human handoff'],
         },
         {
-          index: 'C',
           title: 'Data-sensitive organisations',
           text: 'Assess local models and private deployment without handing data to an external service by default.',
           tags: ['Private deployment', 'Local inference', 'Permissions'],
         },
         {
-          index: 'D',
           title: 'Work across devices',
           text: 'Start on a phone, execute on a desktop and return results, with approval and audit records.',
           tags: ['Multi-device', 'Remote tasks', 'Audit'],
@@ -314,7 +302,6 @@ export const en: SiteCopy = {
       ],
     },
     tech: {
-      index: '05',
       kicker: 'Technology philosophy',
       title: 'Use intelligence with restraint.',
       lead: 'A model is only one part of a system. Reliability comes from clear structure, explicit boundaries and continuous verification.',
@@ -326,7 +313,7 @@ export const en: SiteCopy = {
       ],
     },
     cta: {
-      kicker: '06 / Collaboration',
+      kicker: 'COLLABORATION / WORK WITH US',
       title: 'Have a specific problem? Let us start there.',
       body: 'Tell us the scenario, constraints and expectations. We will first judge whether AI fits, then discuss how to build it.',
       primary: 'Start a conversation',
@@ -358,9 +345,9 @@ export const en: SiteCopy = {
     ],
     principlesTitle: 'Three beliefs',
     principles: [
-      { index: '01', title: 'Real problems first', text: 'Start from who is doing what and where they are stuck, not from technical buzzwords.' },
-      { index: '02', title: 'Verification over presentation', text: 'A demo can look beautiful. It is only done when it enters daily work and survives real input.' },
-      { index: '03', title: 'People stay in the loop', text: 'High-risk judgements and actions keep human approval. Automation does not remove responsibility.' },
+      { title: 'Real problems first', text: 'Start from who is doing what and where they are stuck, not from technical buzzwords.' },
+      { title: 'Verification over presentation', text: 'A demo can look beautiful. It is only done when it enters daily work and survives real input.' },
+      { title: 'People stay in the loop', text: 'High-risk judgements and actions keep human approval. Automation does not remove responsibility.' },
     ],
     processTitle: 'How we work',
     processLead: 'We do not aim to finish everything at once. Confirm direction, then add complexity step by step.',
@@ -518,11 +505,11 @@ export const en: SiteCopy = {
     ],
     principlesTitle: 'Five engineering principles',
     principles: [
-      { index: '01', title: 'Engineering practice', text: 'Types, tests, builds and releases belong in automation, so quality does not rely on memory.' },
-      { index: '02', title: 'Reliability & verifiability', text: 'Tasks have state, execution has records, failures have reviews. Critical judgements retain human approval.' },
-      { index: '03', title: 'Data & privacy', text: 'Prefer local processing and collect only what is needed. Sensitive capabilities favour private deployment.' },
-      { index: '04', title: 'Sustainable iteration', text: 'Validate assumptions with small prototypes, then replace and extend rather than betting everything at once.' },
-      { index: '05', title: 'Openness & collaboration', text: 'Public repositories, clear documentation and reproducible experiments let partners inspect and take over.' },
+      { title: 'Engineering practice', text: 'Types, tests, builds and releases belong in automation, so quality does not rely on memory.' },
+      { title: 'Reliability & verifiability', text: 'Tasks have state, execution has records, failures have reviews. Critical judgements retain human approval.' },
+      { title: 'Data & privacy', text: 'Prefer local processing and collect only what is needed. Sensitive capabilities favour private deployment.' },
+      { title: 'Sustainable iteration', text: 'Validate assumptions with small prototypes, then replace and extend rather than betting everything at once.' },
+      { title: 'Openness & collaboration', text: 'Public repositories, clear documentation and reproducible experiments let partners inspect and take over.' },
     ],
     loopTitle: 'A loop that keeps running',
     loopLead: 'From a problem to a system, and from the system back to the problem.',

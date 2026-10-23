@@ -90,7 +90,6 @@ export function Home() {
         <div className="container">
           <Reveal>
             <SectionHead
-              index={home.intro.index}
               kicker={home.intro.kicker}
               title={<span id="intro-title">{home.intro.title}</span>}
             />
@@ -108,15 +107,10 @@ export function Home() {
             </Reveal>
 
             <Reveal delay={120} className="intro__cards">
-              {home.intro.cards.map((card, index) => (
+              {home.intro.cards.map((card) => (
                 <article className="intro-card" key={card.title}>
-                  <span className="intro-card__index" aria-hidden="true">
-                    {String(index + 1).padStart(2, '0')}
-                  </span>
-                  <div>
-                    <h3>{card.title}</h3>
-                    <p>{card.text}</p>
-                  </div>
+                  <h3>{card.title}</h3>
+                  <p>{card.text}</p>
                 </article>
               ))}
             </Reveal>
@@ -128,7 +122,6 @@ export function Home() {
         <div className="container">
           <Reveal>
             <SectionHead
-              index={home.directions.index}
               kicker={home.directions.kicker}
               title={<span id="directions-title">{home.directions.title}</span>}
               lead={home.directions.lead}
@@ -140,7 +133,9 @@ export function Home() {
               {home.directions.items.map((item) => (
                 <Link key={item.id} className="direction-card" to={`/solutions#${item.id}`}>
                   <div className="direction-card__top">
-                    <span className="direction-card__index">{item.index}</span>
+                    <span className="direction-card__status">
+                      {copy.solutions.items.find((solution) => solution.id === item.id)?.status}
+                    </span>
                     <ArrowUpRight className="icon direction-card__arrow" />
                   </div>
                   <h3>{item.title}</h3>
@@ -170,7 +165,6 @@ export function Home() {
         <div className="container">
           <Reveal>
             <SectionHead
-              index={home.products.index}
               kicker={home.products.kicker}
               title={<span id="products-title">{home.products.title}</span>}
               lead={home.products.lead}
@@ -183,7 +177,6 @@ export function Home() {
                 <ProductCard
                   key={product.slug}
                   product={product}
-                  index={index}
                   featured={index === 0}
                 />
               ))}
@@ -206,7 +199,6 @@ export function Home() {
         <div className="container">
           <Reveal>
             <SectionHead
-              index={home.scenarios.index}
               kicker={home.scenarios.kicker}
               title={<span id="scenarios-title">{home.scenarios.title}</span>}
               lead={home.scenarios.lead}
@@ -214,12 +206,9 @@ export function Home() {
           </Reveal>
 
           <Reveal>
-            <ol className="scenario-list">
+            <ul className="scenario-list">
               {home.scenarios.items.map((item) => (
-                <li className="scenario-row" key={item.index}>
-                  <span className="scenario-row__index" aria-hidden="true">
-                    {item.index}
-                  </span>
+                <li className="scenario-row" key={item.title}>
                   <h3>{item.title}</h3>
                   <p>{item.text}</p>
                   <ul className="tag-list">
@@ -229,7 +218,7 @@ export function Home() {
                   </ul>
                 </li>
               ))}
-            </ol>
+            </ul>
           </Reveal>
         </div>
       </section>
@@ -238,7 +227,6 @@ export function Home() {
         <div className="container">
           <Reveal>
             <SectionHead
-              index={home.tech.index}
               kicker={home.tech.kicker}
               title={<span id="tech-title">{home.tech.title}</span>}
               lead={home.tech.lead}
@@ -249,15 +237,10 @@ export function Home() {
             <div className="tech-panel">
               <div className="tech-panel__left">
                 <div className="tech-points">
-                  {home.tech.points.map((point, index) => (
+                  {home.tech.points.map((point) => (
                     <div className="tech-point" key={point.title}>
-                      <span className="tech-point__index" aria-hidden="true">
-                        {String(index + 1).padStart(2, '0')}
-                      </span>
-                      <div>
-                        <h3>{point.title}</h3>
-                        <p>{point.text}</p>
-                      </div>
+                      <h3>{point.title}</h3>
+                      <p>{point.text}</p>
                     </div>
                   ))}
                 </div>

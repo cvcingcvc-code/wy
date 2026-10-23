@@ -219,7 +219,6 @@ export const zh = {
     heroFoot: { brand: 'GORGON TECHNOLOGY', scroll: 'SCROLL TO EXPLORE', version: 'V1 / 2026' },
     marquee: ['AI AGENTS', 'WORKFLOW AUTOMATION', 'LOCAL MODELS', 'MULTI-DEVICE COLLABORATION', 'SOFTWARE PRODUCTS'],
     intro: {
-      index: '01',
       kicker: '我们是谁',
       title: '不做停留在演示里的 AI。',
       body: [
@@ -234,35 +233,30 @@ export const zh = {
       ],
     },
     directions: {
-      index: '02',
       kicker: '技术方向',
       title: '从一个问题，到一套运行中的能力。',
       lead: '四条相互支撑的方向，覆盖从智能体编排到本地部署的关键环节。',
       items: [
         {
           id: 'agent-workflow',
-          index: '01',
           title: 'AI Agent 与工作流自动化',
           summary: '把目标拆成任务，让智能体在受控边界内调用工具、推进流程，并留下执行记录。',
           tags: ['任务编排', '工具调用', '人工批准'],
         },
         {
           id: 'enterprise-support',
-          index: '02',
           title: '企业 AI 应用与智能客服',
           summary: '围绕企业自有知识与服务政策，构建知道边界的回答系统，把复杂问题交还给人。',
           tags: ['知识库', '人工接管', '可核验回答'],
         },
         {
           id: 'local-models',
-          index: '03',
           title: '本地 AI 模型与私有化部署',
           summary: '在数据不离开组织的前提下，评估轻量模型、本地推理与自动化流程的可行性。',
           tags: ['本地推理', '数据边界', '私有化'],
         },
         {
           id: 'multi-device',
-          index: '04',
           title: '多端智能协作与远程任务执行',
           summary: '让手机发起、电脑执行、结果回传，执行范围受白名单与人工批准约束。',
           tags: ['多端协同', '远程任务', '审计'],
@@ -270,7 +264,6 @@ export const zh = {
       ],
     },
     products: {
-      index: '03',
       kicker: '产品与实验室',
       title: '正在构建的东西。',
       lead: '产品阶段依据公开仓库、Release 与验收记录标注。尚未公开或未经验证的能力，不会被写成已交付。',
@@ -278,31 +271,26 @@ export const zh = {
       all: '查看全部产品',
     },
     scenarios: {
-      index: '04',
       kicker: '应用场景',
       title: '让智能进入真实流程。',
       lead: '我们不预设所有答案。以下是我们正在关注、也愿意一起探索的问题类型。',
       items: [
         {
-          index: 'A',
           title: '知识密集的个人工作',
           text: '任务、日程、笔记与信息检索被接成连续工作流，而不是散落在多个应用里。',
           tags: ['个人效率', '信息整理', '行动闭环'],
         },
         {
-          index: 'B',
           title: '企业客服与知识支持',
           text: '围绕商品、FAQ 与售后政策建立可核验的回答边界，复杂问题转交人工。',
           tags: ['智能客服', '知识库', '人工接管'],
         },
         {
-          index: 'C',
           title: '数据敏感的组织',
           text: '在不把数据交出去的前提下，评估本地模型与私有化部署是否可行。',
           tags: ['私有化', '本地推理', '权限边界'],
         },
         {
-          index: 'D',
           title: '跨设备的任务执行',
           text: '手机发起、电脑执行、结果回传，并保留人工批准与审计记录。',
           tags: ['多端协同', '远程任务', '审计'],
@@ -310,7 +298,6 @@ export const zh = {
       ],
     },
     tech: {
-      index: '05',
       kicker: '技术理念',
       title: '克制地使用智能。',
       lead: '模型只是系统的一部分。可靠性来自清晰的结构、边界的定义和持续的验证。',
@@ -322,7 +309,7 @@ export const zh = {
       ],
     },
     cta: {
-      kicker: '06 / 合作',
+      kicker: 'COLLABORATION / 合作',
       title: '有一个具体问题？我们从那里开始。',
       body: '告诉我们你的场景、约束和预期。我们会先判断它是否适合用 AI 解决，再讨论怎么实现。',
       primary: '发起合作咨询',
@@ -354,9 +341,9 @@ export const zh = {
     ],
     principlesTitle: '我们相信的三件事',
     principles: [
-      { index: '01', title: '真实问题优先', text: '不从技术名词出发，从谁在做什么、卡在哪里出发。' },
-      { index: '02', title: '可验证胜过可展示', text: '演示可以很漂亮，但只有进入日常流程、经受真实输入，才算完成。' },
-      { index: '03', title: '人始终在环路中', text: '高风险判断和执行保留人工批准；自动化不意味着放弃责任。' },
+      { title: '真实问题优先', text: '不从技术名词出发，从谁在做什么、卡在哪里出发。' },
+      { title: '可验证胜过可展示', text: '演示可以很漂亮，但只有进入日常流程、经受真实输入，才算完成。' },
+      { title: '人始终在环路中', text: '高风险判断和执行保留人工批准；自动化不意味着放弃责任。' },
     ],
     processTitle: '我们如何工作',
     processLead: '不追求一次做完，先确认方向，再逐步增加复杂度。',
@@ -514,11 +501,11 @@ export const zh = {
     ],
     principlesTitle: '五条工程原则',
     principles: [
-      { index: '01', title: '工程实践', text: '类型、测试、构建与发布尽量进入自动化流程，让质量不是靠记忆维持。' },
-      { index: '02', title: '可靠性与可验证性', text: '任务有状态、执行有记录、失败可复盘；关键判断保留人工批准。' },
-      { index: '03', title: '数据与隐私保护', text: '优先本地处理，只收集必要信息；敏感能力优先考虑私有化部署。' },
-      { index: '04', title: '可持续迭代', text: '用小步原型验证假设，再逐步替换与扩展，不一次性押注。' },
-      { index: '05', title: '开放与协同', text: '公开仓库、清晰文档与可复现实验，让合作方能够检查和接手。' },
+      { title: '工程实践', text: '类型、测试、构建与发布尽量进入自动化流程，让质量不是靠记忆维持。' },
+      { title: '可靠性与可验证性', text: '任务有状态、执行有记录、失败可复盘；关键判断保留人工批准。' },
+      { title: '数据与隐私保护', text: '优先本地处理，只收集必要信息；敏感能力优先考虑私有化部署。' },
+      { title: '可持续迭代', text: '用小步原型验证假设，再逐步替换与扩展，不一次性押注。' },
+      { title: '开放与协同', text: '公开仓库、清晰文档与可复现实验，让合作方能够检查和接手。' },
     ],
     loopTitle: '一个持续发生的循环',
     loopLead: '从问题到系统，再从系统回到问题。',
